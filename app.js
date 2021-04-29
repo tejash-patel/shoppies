@@ -4,7 +4,7 @@ $("form").submit((e) => {
     e.preventDefault();
     let searchValue = $("#input-value").val();
     $("#results-name").html(searchValue);
-    $.get(`http://www.omdbapi.com/?s=${searchValue}&apikey=6735e3c2`, function (data) {
+    $.get(`https://www.omdbapi.com/?s=${searchValue}&apikey=6735e3c2`, function (data) {
         let resultString = "";
         data.Search = data.Search.slice(0, 5);
         data.Search.forEach(d => {
